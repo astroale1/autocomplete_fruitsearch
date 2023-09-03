@@ -1,0 +1,60 @@
+/* Add this to make the background yellow */
+body {
+  background-image: linear-gradient(to bottom right, yellow, red);;
+  margin: 0;
+  padding: 0;
+  /* Flexbox layout to center child elements */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Make sure the body takes up the full viewport height */
+}
+
+.search-container {
+  width: 400px;
+  position: relative;
+
+}
+
+.search-container input,
+.search-container .suggestions {
+  width: 100%;
+  background: #ffffff29;
+  text-align: left;
+}
+
+.search-container input {
+  background: rgba(255, 255, 255, 0.091);
+  height: 60px;
+  padding: 0 10px;
+  border-bottom: 2px solid #e65c00;
+}
+
+.search-container .suggestions {
+  position: absolute;
+  top: 60px;
+}
+
+ul {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+ul.has-suggestions {
+  display: block;
+}
+
+ul li {
+  padding: 10px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+ul li:hover {
+  background-color: #e65c00;
+}
